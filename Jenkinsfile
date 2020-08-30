@@ -10,8 +10,8 @@ pipeline {
                 bat "mvn clean package"
                 bat "docker build -t arj-spring/sample-spring-boot ."
                 bat "docker run -p 8082:8082 arj-spring/sample-spring-boot"
-                // To run Maven on a Windows agent, use
-                // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                // To run Maven on a Unix agent, use
+                // sh "mvn -Dmaven.test.failure.ignore=true clean package"
             }
 
            // post {
