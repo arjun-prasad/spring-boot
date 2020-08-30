@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git 'https://github.com/arjun-prasad/spring-boot'
-                    // Run Maven on a Unix agent.
+                // Run Maven on a Windows agent.
                 bat "mvn clean package"
                 bat "docker build -t arj-spring/sample-spring-boot ."
                 bat "docker run -p 8082:8082 arj-spring/sample-spring-boot"
